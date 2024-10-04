@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Form Designer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/7a1ef31398.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <h1 class="title">Visual Form Designer</h1>
+        <button id="save-form" class="save-button">Save</button>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <p>Components</p>
+            <div class="sidebar-button-container">
+                <button id="add-input" class="sidebar-button">
+                    <span>Input</span>
+                    <span class="plus-icon">+</span>
+                </button>
+                <div class="input-fields hidden" id="input-fields">
+                    <input type="text" id="input-label" placeholder="Label">
+                    <input type="text" id="input-placeholder" placeholder="Placeholder">
+                    <div class="action-buttons">
+                        <button id="cancel-input" class="cancel-button">Cancel</button>
+                        <button id="add-input-element" class="add-button">Add</button>
+                    </div>
+                </div>
+
+                <button id="add-select" class="sidebar-button">
+                    <span>Select</span>
+                    <span class="plus-icon">+</span>
+                </button>
+                <div class="input-fields hidden" id="select-fields">
+                    <input type="text" id="select-label" placeholder="Label">
+                    <input type="text" id="select-options" placeholder="Options (comma-separated)">
+                    <div class="action-buttons">
+                        <button id="cancel-select" class="cancel-button">Cancel</button>
+                        <button id="add-select-element" class="add-button">Add</button>
+                    </div>
+                </div>
+
+                <button id="add-textarea" class="sidebar-button">
+                    <span>Textarea</span>
+                    <span class="plus-icon">+</span>
+                </button>
+                <div class="input-fields hidden" id="textarea-fields">
+                    <input type="text" id="textarea-label" placeholder="Label">
+                    <input type="text" id="textarea-placeholder" placeholder="Placeholder">
+                    <div class="action-buttons">
+                        <button id="cancel-textarea" class="cancel-button">Cancel</button>
+                        <button id="add-textarea-element" class="add-button">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-area">
+            <form id="form" class="form" ondragover="event.preventDefault()">
+            </form>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="modal model-hidden">
+        <div class="modal-content">
+            <h2>Edit Element</h2>
+            <input type="text" id="edit-label" placeholder="Label" class="modal-input">
+            <input type="text" id="edit-placeholder" placeholder="Placeholder" class="modal-input model-hidden">
+            <input type="text" id="edit-options" placeholder="Options (comma-separated)" class="modal-input model-hidden">
+            <div class="action-buttons">
+                <button id="cancel-edit" class="cancel-button">Cancel</button>
+                <button id="save-edit" class="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
