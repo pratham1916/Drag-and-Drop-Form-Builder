@@ -30,5 +30,5 @@ the option to manage select options. Upon saving, the updated form structure wil
 
 2. Navigate to the project directory:
     ```bash
-    cd Sunbase-Frontend-Assignment
+    cd Drag-and-Drop-Form-Builder 
     ```
